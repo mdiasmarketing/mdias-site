@@ -1,0 +1,55 @@
+@font-face { font-family: "Adineue PRO"; src: url(/fonts/adineue-bold.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Adineue PRO"; src: url(/fonts/adineue-regular.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+:root { --preto: #0B0B0B; --branco: #FFFFFF; --laranja: #F65612; --cinza: #9A9A9A; --linha: rgba(255,255,255,.14); --max: 1120px; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--preto); color: var(--branco); font-family: Figtree, system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.topo, main, .rodape { max-width: var(--max); margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
+.marca, .rod-marca { font-family: "Adineue PRO", Figtree, sans-serif; font-weight: 700; font-size: 26px; letter-spacing: .02em; text-decoration: none; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border-radius: 99px; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; transition: transform .15s ease, background .15s ease, border-color .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible { outline: 2px solid var(--laranja); outline-offset: 3px; }
+.btn-laranja { background: var(--laranja); color: var(--branco); }
+.btn-laranja:hover { background: #ff6a2b; }
+.btn-linha { border: 1px solid var(--linha); }
+.btn-linha:hover { border-color: var(--branco); }
+.btn-claro { background: var(--branco); color: var(--preto); min-height: 40px; padding: 0 18px; font-size: 14px; }
+.hero { padding: 13vh 0 14vh; }
+.sobre { margin: 0 0 18px; color: var(--cinza); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; }
+h1 { margin: 0; font-family: "Adineue PRO", Figtree, sans-serif; font-weight: 700; font-size: clamp(48px, 10vw, 128px); line-height: .95; letter-spacing: -.01em; }
+.ponto { color: var(--laranja); }
+.lead { max-width: 560px; margin: 28px 0 36px; color: #D6D6D6; font-size: clamp(17px, 2vw, 20px); }
+.acoes { display: flex; gap: 12px; flex-wrap: wrap; }
+.servicos { padding: 0 0 110px; }
+.servicos h2 { margin: 0 0 8px; font-family: "Adineue PRO", Figtree, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--cinza); }
+.servicos ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); }
+.servicos li { display: flex; gap: 18px; padding: 30px 28px 30px 0; border-top: 1px solid var(--linha); }
+.n { flex: none; width: 26px; color: var(--laranja); font-family: "Adineue PRO", Figtree, sans-serif; font-weight: 700; font-size: 15px; padding-top: 3px; }
+.servicos h3 { margin: 0 0 6px; font-size: 20px; font-weight: 600; }
+.servicos p { margin: 0; color: var(--cinza); }
+.rodape { display: grid; grid-template-columns: auto 1fr auto; gap: 24px 40px; align-items: start; padding-top: 36px; padding-bottom: 44px; border-top: 1px solid var(--linha); font-size: 14px; color: var(--cinza); }
+.rod-marca { color: var(--branco); font-size: 20px; }
+.rod-dados p { margin: 0 0 2px; }
+.rod-dados a, .rod-links a { text-decoration: none; }
+.rod-dados a:hover, .rod-links a:hover { color: var(--branco); }
+.rod-links { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+/* página de texto (privacidade) */
+.texto { max-width: 720px; padding: 48px 0 96px; }
+.texto h1 { font-size: clamp(36px, 6vw, 56px); margin-bottom: 8px; }
+.texto .data { color: var(--cinza); font-size: 14px; margin: 0 0 32px; }
+.texto h2 { font-size: 19px; font-weight: 600; margin: 36px 0 8px; }
+.texto p, .texto li { color: #D6D6D6; }
+.texto ul { padding-left: 20px; }
+@media (max-width: 760px) {
+  .servicos ol { grid-template-columns: 1fr; }
+  .servicos li { padding-right: 0; }
+  .rodape { grid-template-columns: 1fr; }
+  .rod-links { align-items: flex-start; }
+  .rodape { font-size: 13px; }
+  .topo, main, .rodape { padding-left: 16px; padding-right: 16px; }
+  .hero { padding: 9vh 0 11vh; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+b, strong { font-weight: 600; }
